@@ -1,5 +1,7 @@
 # Light strip
 
+[![Circle CI](https://circleci.com/gh/taktran/light-strip.svg?style=svg)](https://circleci.com/gh/taktran/light-strip)
+
 Light playground
 
 ## Usage
