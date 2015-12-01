@@ -1,55 +1,21 @@
-# budo-gulp-starter
+# Light strip
 
-[![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
-
-A "starter kit" with [budō](https://github.com/mattdesl/budo), SASS, and Gulp. The aim is rapid iteration and a tight feedback loop. Could be augmented with VueJS, React, or any frameworks that work in browserify.
-
-[[demo]](http://mattdesl.github.io/budo-gulp-starter/app/)
-
-Some highlights:
-
-  - npm dependencies with browserify
-  - SASS for CSS pre-processing
-  - Babel for ES2015 transpiling
-  - All the goodies of [budo](https://github.com/mattdesl/budo):
-    - Fast incremental bundling with watchify
-    - Pretty-printed HTTP logging
-    - Syntax errors reported in the browser
-    - LiveReload browser refresh on `bundle.js` update
-    - LiveReload CSS injection on *.scss changes
-  
-Note that budō is not tied to Gulp, and in some cases it may be easier to use it's command-line version. 
+Light playground
 
 ## Usage
 
-```sh
-git clone https://github.com/mattdesl/budo-gulp-starter.git
-cd budo-gulp-starter
+Install dependencies
 
-# install dependencies
-npm install
+    npm install
 
-# start development server & open browser
-npm run open
+Set up lights
 
-# or, just start dev server
-npm start
-```
+1. Upload [custom firmata firmware using arduino software](https://github.com/ajfisher/node-pixel/tree/master/firmware#using-arduino-ide)
+2. Run lights
 
-This should run the watch server and open `localhost:9966` in your default browser. Changes to `src/index.js` will trigger a incremental bundle and page reload. Changes to `src/sass/main.scss` will cause CSS injection without losing application state. 
-
-Syntax errors are overlayed in the browser with a custom style:
-
-![img](http://i.imgur.com/dP7lH7N.png) 
-
-## tasks
-
-```
-npm run
-  start  - start dev server
-  open   - start dev server and open the browser to localhost
-  build  - the compressed production build
-```
+  ```sh
+  npm run lights
+  ```
 
 ## License
 

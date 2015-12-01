@@ -19,6 +19,8 @@
     "domready": "^1.0.7",
     "draw-triangles-2d": "^1.0.0",
     "gl-vec2": "^1.0.0",
+    "johnny-five": "0.9.13",
+    "node-pixel": "0.4.1",
     "raf-loop": "^1.0.1",
     "randf": "^1.0.0"
   },
@@ -40,7 +42,8 @@
     "test": "node test.js",
     "open": "gulp watch --open",
     "start": "gulp watch",
-    "build": "gulp bundle --production"
+    "build": "gulp bundle --production",
+    "lights": "node src/lights.js"
   },
   "keywords": [
     "budo",
