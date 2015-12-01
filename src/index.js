@@ -1,25 +1,34 @@
-const domify = require('domify')
+import Yolk from 'yolk'
 
-require('domready')(() => {
-  //show canvas demo
-  let context = require('./canvas')()
-  document.body.appendChild(context.canvas)
+function Counter (props, children) {
 
-  //show copy
-  let url = 'https://github.com/mattdesl/budo-gulp-starter'
-  let list = [
-    'npm dependencies with browserify',
-    'incremental bundling with watchify',
-    'SASS for CSS pre-processor',
-    'LiveReload for browser refresh and CSS injection',
-    'Babel for ES6 transpiling',
-    'syntax error reporting with errorify'
-  ].map(x => `<li>${x}</li>`)
-   .join('\n')
+  // map all plus button click events to 1
+  const handlePlus = this.createEventHandler()
+  const plusOne$ = handlePlus.map(() => 1)
 
-  list = domify(`
-    <p>workflow</p>
-    <ul>${list}</ul>
-    <a href="${url}">[source]</a>`)
-  document.body.appendChild(list)
-})
+  // map all minus button click events to -1
+  const handleMinus = this.createEventHandler()
+  const minusOne$ = handleMinus.map(() => -1)
+
+  // merge both event streams together and keep a running count of the result
+  const count$ = plusOne$.merge(minusOne$).scan((x, y) => x + y, 0).startWith(0)
+
+  // prop keys are always cast as observables
+  const title$ = props.title.map(title => `Awesome ${title}`)
+
+  return (
+    <div>
+      <h1>{title$}</h1>
+      <div>
+        <button id="plus" onClick={handlePlus}>+</button>
+        <button id="minus" onClick={handleMinus}>-</button>
+      </div>
+      <div>
+        <span>Count: {count$}</span>
+      </div>
+      {children}
+    </div>
+  )
+}
+
+Yolk.render(<Counter title="Tak" />, document.getElementById('container'))
