@@ -1,7 +1,7 @@
 {
   "name": "budo-gulp-starter",
   "version": "1.0.0",
-  "description": "a starter kit with Budo, LESS and Gulp",
+  "description": "Light playground",
   "main": "index.js",
   "license": "MIT",
   "author": {
