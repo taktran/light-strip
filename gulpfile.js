@@ -30,6 +30,15 @@ const lintFiles = [
   './src/**/*.js'
 ];
 
+gulp.task('lint:ci', function () {
+  return gulp.src(lintFiles)
+    .pipe(semistandard())
+    .pipe(semistandard.reporter('default', {
+      breakOnError: true,
+      breakOnWarning: true
+    }));
+});
+
 gulp.task('lint', function () {
   return gulp.src(lintFiles)
     .pipe(semistandard())

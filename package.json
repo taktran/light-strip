@@ -32,7 +32,7 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "scripts": {
-    "test": "node test.js",
+    "test": "gulp lint:ci",
     "open": "gulp watch --open",
     "start": "gulp watch",
     "build": "gulp bundle --production",
