@@ -33,7 +33,10 @@ const lintFiles = [
 gulp.task('lint', function () {
   return gulp.src(lintFiles)
     .pipe(semistandard())
-    .pipe(semistandard.reporter('default'));
+    .pipe(semistandard.reporter('default', {
+      breakOnError: false,
+      breakOnWarning: false
+    }));
 });
 
 // our CSS pre-processor
@@ -48,8 +51,8 @@ gulp.task('sass', function () {
 
 // the development task
 gulp.task('watch', ['sass', 'lint'], function (cb) {
-  // watch SASS
-  gulp.watch('src/sass/*.scss', ['sass']);
+  gulp.watch('src/sass/*.scss', [ 'sass' ]);
+  gulp.watch(lintFiles, [ 'lint' ]);
 
   // dev server
   budo(entry, {
