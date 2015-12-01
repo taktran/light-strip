@@ -1,4 +1,4 @@
-/** @jsx Yolk */
+/** @jsx Yolk.h */
 import Yolk from 'yolk';
 
 function Counter (props, children) {
