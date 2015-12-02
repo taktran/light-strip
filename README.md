@@ -6,6 +6,10 @@ Light playground
 
 ## Usage
 
+Install [nvm](https://github.com/creationix/nvm), and in the root directory run:
+
+    nvm use
+
 Install dependencies
 
     npm install
