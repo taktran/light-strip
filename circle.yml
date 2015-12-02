@@ -1,3 +1,8 @@
 machine:
   node:
     version: 4.2.2
+
+checkout:
+  post:
+    - npm install node-sass
+    - npm rebuild node-sass
