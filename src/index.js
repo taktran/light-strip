@@ -7,10 +7,10 @@ import Yolk from 'yolk';
 
 function Led (props, children) {
   const { num } = props;
-  const handleToggle = this.createEventHandler();
+  // const handleToggle = this.createEventHandler();
 
   return (
-    <li><button class='led'>LED {num}</button></li>
+    <li><button className='led'>LED {num}</button></li>
   );
 }
 
