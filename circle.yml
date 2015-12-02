@@ -4,5 +4,6 @@ machine:
 
 checkout:
   post:
+    # Hack to fix builds on ci
     - npm install node-sass
     - npm rebuild node-sass
