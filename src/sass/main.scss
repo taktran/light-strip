@@ -5,13 +5,12 @@ $gray: hsla(0, 0%, 25%, 0.05);
 body {
   color: #1d1d1d;
   padding: 30px;
-  background: #eee;
+  background: #fafafa;
   font-family: 'Helvetica', sans-serif;
 }
 
-canvas {
-  opacity: 0.25;
-  pointer-events: none;
+h1 {
+  font-size: 2rem;
 }
 
 a {
@@ -21,7 +20,6 @@ a {
   display: inline-block;
   text-decoration: none;
   padding: 5px;
-  
 
   &:after {
     content: ' ';
