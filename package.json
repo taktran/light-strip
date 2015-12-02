@@ -12,6 +12,7 @@
   "dependencies": {
     "johnny-five": "0.9.13",
     "node-pixel": "0.4.1",
+    "rx": "4.0.7",
     "yolk": "0.9.1"
   },
   "devDependencies": {

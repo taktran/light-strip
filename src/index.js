@@ -1,34 +1,35 @@
 /** @jsx Yolk.h */
+/* eslint react/prop-types: 0 */
 import Yolk from 'yolk';
+// import Rx from 'rx';
 
-function Counter (props, children) {
-  // map all plus button click events to 1
-  const handlePlus = this.createEventHandler();
-  const plusOne$ = handlePlus.map(() => 1);
+// const NUM_LEDS = 30;
 
-  // map all minus button click events to -1
-  const handleMinus = this.createEventHandler();
-  const minusOne$ = handleMinus.map(() => -1);
-
-  // merge both event streams together and keep a running count of the result
-  const count$ = plusOne$.merge(minusOne$).scan((x, y) => x + y, 0).startWith(0);
-
-  // prop keys are always cast as observables
-  const title$ = props.title.map(title => `Awesome ${title}`);
+function Led (props, children) {
+  const { num } = props;
+  const handleToggle = this.createEventHandler();
 
   return (
-    <div>
-      <h1>{title$}</h1>
-      <div>
-        <button id='plus' onClick={handlePlus}>+</button>
-        <button id='minus' onClick={handleMinus}>-</button>
-      </div>
-      <div>
-        <span>Count: {count$}</span>
-      </div>
-      {children}
-    </div>
+    <li><button class='led'>LED {num}</button></li>
   );
 }
 
-Yolk.render(<Counter title='Tak' />, document.getElementById('container'));
+function LedContainer (props, children) {
+  // TODO: Make it an observable
+  // const leds = Rx.Observable.range(0, NUM_LEDS).reduce((acc, x, idx, source) => {
+  //   return acc.push(<Led num='{idx}' />);
+  // }, []);
+
+  return (
+    <ul>
+      <Led num='0'/>
+      <Led num='1'/>
+      <Led num='2'/>
+      <Led num='3'/>
+      <Led num='4'/>
+      {children}
+    </ul>
+  );
+}
+
+Yolk.render(<LedContainer />, document.getElementById('led-container'));
