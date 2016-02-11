@@ -23,6 +23,11 @@ Set up lights
   npm run lights
   ```
 
+Run interface
+
+    npm start
+    # Go to url from output
+
 ## License
 
 MIT, see [LICENSE.md](http://github.com/mattdesl/budo-gulp-starter/blob/master/LICENSE.md) for details.
