@@ -28,6 +28,10 @@ Run interface
     npm start
     # Go to url from output
 
+## Resources
+
+* [Progress/Backlog](https://waffle.io/taktran/light-strip)
+
 ## License
 
 MIT, see [LICENSE.md](http://github.com/mattdesl/budo-gulp-starter/blob/master/LICENSE.md) for details.
