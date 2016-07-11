@@ -5,8 +5,8 @@ var board = new five.Board();
 
 board.on('ready', function () {
   var strip = new pixel.Strip({
-    data: 6,
-    length: 30, // Doesn't seem to do anything
+    pin: 6,
+    length: 192, // Maximum on FIRMATA
     board: this,
     controller: 'FIRMATA'
   });
@@ -24,6 +24,13 @@ board.on('ready', function () {
   strip.on('ready', function () {
     console.log('Pixels ready\n');
 
-    showColor('#111111');
+    // showColor('#111111');
+    const p = strip.pixel(0);     // get second LED
+    p.color("#0000FF");
+
+    const p2 = strip.pixel(191);     // get second LED
+    p2.color("#FF00FF");
+
+    strip.show();
   });
 });
