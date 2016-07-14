@@ -26,10 +26,10 @@ board.on('ready', function () {
 
     // showColor('#111111');
     const p = strip.pixel(0);     // get second LED
-    p.color("#0000FF");
+    p.color('#0000FF');
 
     const p2 = strip.pixel(191);     // get second LED
-    p2.color("#FF00FF");
+    p2.color('#FF00FF');
 
     strip.show();
   });
