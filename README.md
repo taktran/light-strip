@@ -17,10 +17,10 @@ Install dependencies
 Set up lights
 
 1. Upload [custom firmata firmware using arduino software](https://github.com/ajfisher/node-pixel/tree/master/firmware#using-arduino-ide)
-2. Run lights
+2. Run lights demos
 
   ```sh
-  npm run lights
+  node src/demos/[demo-file]
   ```
 
 Run interface
