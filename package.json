@@ -12,8 +12,10 @@
   "dependencies": {
     "async": "1.5.0",
     "johnny-five": "0.9.13",
+    "lodash": "4.13.1",
     "node-pixel": "0.6.1",
     "rx": "4.0.7",
+    "shifty": "1.5.2",
     "yolk": "0.9.1"
   },
   "devDependencies": {
