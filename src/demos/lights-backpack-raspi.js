@@ -1,3 +1,21 @@
+/**
+ * Demo of the neo pixel lights on a raspberry pi
+ *
+ * Set up:
+ *
+ *    * Upload arduino with [node-pixel backpack](https://github.com/ajfisher/node-pixel/tree/master/firmware/build/backpack)
+ *    * Wire up
+ *
+ *        arduino A4 -> rpi SDA
+ *        arduino A5 -> rpi SCL
+ *        arduino RX1 -> LED Din
+ *        arduino GND -> rpi GND -> LED GND -> 5V mains -ve
+ *        rpi 5V -> arduino VCC -> LED 5V-> 5V mains +ve
+ *
+ *    * Run this script on a rasbperry pi
+ *
+ * Based on https://github.com/ajfisher/node-pixel/blob/master/examples/johnnyfive-i2c.js
+ */
 var five = require('johnny-five');
 var pixel = require('node-pixel');
 var raspi = require("raspi-io");

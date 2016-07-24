@@ -1,3 +1,13 @@
+/**
+ * Demo of the neo pixel lights
+ *
+ * Set up:
+ *
+ *    * Upload arduino with [node-pixel backpack](https://github.com/ajfisher/node-pixel/tree/master/firmware/build/backpack)
+ *    * TODO
+ *
+ * Based on https://github.com/ajfisher/node-pixel/blob/master/examples/johnnyfive-i2c.js
+ */
 var five = require('johnny-five');
 var pixel = require('node-pixel');
 

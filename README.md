@@ -14,14 +14,18 @@ Install dependencies
 
     npm install
 
+### Light demos
+
+To run the light demos
+
 Set up lights
 
-1. Upload [custom firmata firmware using arduino software](https://github.com/ajfisher/node-pixel/tree/master/firmware#using-arduino-ide)
+1. Upload [relevant firmata firmware using arduino software](https://github.com/ajfisher/node-pixel/tree/master/firmware#using-arduino-ide). See `src/demo/*.js` file for which one is required.
 2. Run lights demos
 
-  ```sh
-  node src/demos/[demo-file]
-  ```
+        ```sh
+        node src/demos/[demo-file]
+        ```
 
 Run interface
 

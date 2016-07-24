@@ -1,3 +1,19 @@
+/**
+ * Demo of the neo pixel lights animation
+ *
+ * Set up:
+ *
+ *    * Upload arduino with [node-pixel firmata](https://github.com/ajfisher/node-pixel/tree/master/firmware/build/node_pixel_firmata)
+ *    * Wire up
+ *
+ *        arduino pin 6 -> LED Din
+ *        arduino GND -> LED GND
+ *        arduino 5V -> LED 5V
+ *
+ *    * Run this script on a rasbperry pi
+ *
+ * Based on https://github.com/ajfisher/node-pixel/blob/master/examples/johnnyfive-i2c.js
+ */
 var pixel = require('node-pixel');
 var five = require('johnny-five');
 
