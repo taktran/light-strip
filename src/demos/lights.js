@@ -1,5 +1,5 @@
 /**
- * Demo of the neo pixel lights animation
+ * Demo of the neo pixel lights
  *
  * Set up:
  *

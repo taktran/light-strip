@@ -18,11 +18,11 @@
  */
 var five = require('johnny-five');
 var pixel = require('node-pixel');
-var raspi = require("raspi-io");
+var Raspi = require('raspi-io');
 
 var opts = {};
 opts.port = process.argv[2] || '';
-opts.io = new raspi();
+opts.io = new Raspi();
 
 var board = new five.Board(opts);
 var strip = null;
