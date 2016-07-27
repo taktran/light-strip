@@ -6,7 +6,6 @@ const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 const streamify = require('gulp-streamify');
 const source = require('vinyl-source-stream');
-const semistandard = require('gulp-semistandard');
 
 const budo = require('budo');
 const browserify = require('browserify');
@@ -25,29 +24,6 @@ const babelify = require('babelify').configure({
 const entry = './src/index.js';
 const outfile = 'bundle.js';
 
-const lintFiles = [
-  'gulpfile.js',
-  './src/**/*.js'
-];
-
-gulp.task('lint:ci', function () {
-  return gulp.src(lintFiles)
-    .pipe(semistandard())
-    .pipe(semistandard.reporter('default', {
-      breakOnError: true,
-      breakOnWarning: true
-    }));
-});
-
-gulp.task('lint', function () {
-  return gulp.src(lintFiles)
-    .pipe(semistandard())
-    .pipe(semistandard.reporter('default', {
-      breakOnError: false,
-      breakOnWarning: false
-    }));
-});
-
 // our CSS pre-processor
 gulp.task('sass', function () {
   gulp.src('./src/sass/main.scss')
@@ -61,7 +37,6 @@ gulp.task('sass', function () {
 // the development task
 gulp.task('watch', ['sass', 'lint'], function (cb) {
   gulp.watch('src/sass/*.scss', [ 'sass' ]);
-  gulp.watch(lintFiles, [ 'lint' ]);
 
   // dev server
   budo(entry, {
