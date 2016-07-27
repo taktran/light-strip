@@ -36,6 +36,7 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "scripts": {
+    "lint": "semistandard",
     "test": "gulp lint:ci",
     "open": "gulp watch --open",
     "start": "gulp watch",
