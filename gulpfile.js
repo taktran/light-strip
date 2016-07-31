@@ -35,7 +35,7 @@ gulp.task('sass', function () {
 });
 
 // the development task
-gulp.task('watch', ['sass', 'lint'], function (cb) {
+gulp.task('watch', ['sass'], function (cb) {
   gulp.watch('src/sass/*.scss', [ 'sass' ]);
 
   // dev server
